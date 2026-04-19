@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edusolve – Premium AI Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="ambient-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.hash='landing'" style="cursor: pointer;">edusolve</div>
+            <div class="nav-links">
+            </div>
+            <div class="nav-actions">
+                <div class="lang-dropdown">EN</div>
+                <button class="btn btn-primary" onclick="checkAuthAndNavigate()">Start Solving</button>
+                <div class="menu-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="app-root">
+        <section id="view-landing" class="view active">
+            <div class="hero section">
+                <div class="hero-content">
+                    <h1 class="hero-title animate-up">WE SOLVE<br>YOUR DOUBTS</h1>
+                    <p class="hero-subtitle animate-up delay-1">The premium AI-powered education platform.</p>
+                    <div class="hero-actions animate-up delay-2">
+                        <button class="btn btn-primary" onclick="checkAuthAndNavigate()">Start Solving</button>
+                    </div>
+                </div>
+                <div class="hero-visuals animate-up delay-3">
+                    <div class="visual-sphere"></div>
+                    <div class="visual-ring"></div>
+                    <div class="visual-glass"></div>
+                </div>
+                <div class="scroll-down">
+                    <a href="#stats">↓</a>
+                </div>
+            </div>
+
+            <div id="stats" class="stats section">
+                <div class="stats-grid animate-up delay-1">
+                    <div class="glass-card stat-card">
+                        <h2 class="stat-number">300+</h2>
+                        <p class="stat-label">Problems Solved</p>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <h2 class="stat-number">100K+</h2>
+                        <p class="stat-label">Students</p>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <h2 class="stat-number">10+</h2>
+                        <p class="stat-label">Subjects</p>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <h2 class="stat-number">280+</h2>
+                        <p class="stat-label">Community</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="features" class="features section dark-mode">
+                <div class="features-container">
+                    <div class="features-text animate-up">
+                        <h2 class="section-title">SMART LEARNING</h2>
+                        <p class="section-subtitle">Experience education like never before.</p>
+
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">✨</span>
+                                <div class="feature-content">
+                                    <h3>Solve Doubts</h3>
+                                    <p>Get step-by-step AI solutions instantly.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🎯</span>
+                                <div class="feature-content">
+                                    <h3>Practice Questions</h3>
+                                    <p>Generate tailored questions to test your knowledge.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📄</span>
+                                <div class="feature-content">
+                                    <h3>PDF Learning</h3>
+                                    <p>Upload any PDF and chat with your materials.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">💬</span>
+                                <div class="feature-content">
+                                    <h3>Community Chat</h3>
+                                    <p>Discuss, collaborate, and grow with peers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="features-visual animate-up delay-2">
+                        <div class="mockup-phone">
+                            <div class="mockup-screen">
+                                <div class="mockup-header"></div>
+                                <div class="mockup-body">
+                                    <div class="mockup-bubble ai">Here is a step-by-step solution...</div>
+                                    <div class="mockup-bubble user">Thanks! Give me a practice question.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="showcase" class="showcase section">
+                <div class="showcase-header text-center animate-up">
+                    <h2 class="section-title">PREMIUM EXPERIENCE</h2>
+                    <p class="section-subtitle">A seamless interface built for focus.</p>
+                </div>
+
+                <div class="showcase-gallery animate-up delay-1">
+                    <div class="showcase-card">
+                        <div class="mockup-desktop">
+                            <div class="mockup-nav"></div>
+                            <div class="mockup-content">
+                                <div class="mockup-sidebar"></div>
+                                <div class="mockup-main"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-auth" class="view">
+            <div class="auth-section">
+                <div class="glass-card auth-card animate-up">
+                    <h2 class="auth-title">Welcome Back</h2>
+                    <p class="auth-subtitle">Login to continue solving.</p>
+
+                    <div id="login-error"
+                        style="display:none; color: #ff4444; margin-bottom: 1rem; padding: 0.5rem; background: rgba(255,68,68,0.1); border-radius: 8px;">
+                    </div>
+
+                    <form class="auth-form" onsubmit="handleLogin(event)">
+                        <div class="input-group">
+                            <label>Username</label>
+                            <input type="text" id="username" placeholder="Enter username" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" id="password" placeholder="••••••••" required>
+                        </div>
+                        <div class="auth-buttons" style="display:flex; gap:1rem; margin-top:1rem;">
+                            <button type="submit" class="btn btn-primary" style="flex:1;">Login</button>
+                            <button type="button" class="btn btn-secondary" style="flex:1;"
+                                onclick="window.location.hash='register'">Signup</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-register" class="view">
+            <div class="auth-section">
+                <div id="register-step-1" class="glass-card auth-card animate-up" style="max-width: 550px;">
+                    <h2 class="auth-title">Join edusolve</h2>
+                    <p class="auth-subtitle">Start your premium AI learning journey today.</p>
+
+                    <div id="register-error"
+                        style="display:none; color: #ff4444; margin-bottom: 1rem; padding: 0.75rem; background: rgba(255,68,68,0.1); border-radius: 8px; font-size: 0.85rem; font-weight: 500;">
+                    </div>
+
+                    <form class="auth-form" onsubmit="handleRegister(event)">
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <div class="input-group" style="flex: 1; margin-bottom: 0;">
+                                <label>First Name</label>
+                                <input type="text" id="reg-firstname" required>
+                            </div>
+                            <div class="input-group" style="flex: 1; margin-bottom: 0;">
+                                <label>Last Name</label>
+                                <input type="text" id="reg-lastname" required>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <div class="input-group" style="flex: 2; margin-bottom: 0;">
+                                <label>Email Address</label>
+                                <input type="email" id="reg-email" placeholder="Verification code will be sent here"
+                                    required>
+                            </div>
+                            <div class="input-group" style="flex: 1; margin-bottom: 0;">
+                                <label>Grade</label>
+                                <select id="reg-grade" required
+                                    style="width: 100%; padding: 0.75rem; border-radius: 8px; background: transparent; border: 1px solid rgba(0,0,0,0.1); color: inherit; font-family: inherit; font-size: 1rem; outline: none;">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="9">9th Grade</option>
+                                    <option value="10">10th Grade</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <div class="input-group" style="flex: 1; margin-bottom: 0;">
+                                <label>Username</label>
+                                <input type="text" id="reg-username" required>
+                            </div>
+                            <div class="input-group" style="flex: 1; margin-bottom: 0;">
+                                <label>Mobile Number</label>
+                                <input type="tel" id="reg-phone" placeholder="e.g. +1234567890" required>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
+                            <div class="input-group" style="flex: 1; margin-bottom: 0;">
+                                <label>Password</label>
+                                <input type="password" id="reg-password" placeholder="Min 8 chars, 1 Special, 1 Num"
+                                    required>
+                            </div>
+                            <div class="input-group" style="flex: 1; margin-bottom: 0;">
+                                <label>Confirm Password</label>
+                                <input type="password" id="reg-password-confirm" required>
+                            </div>
+                        </div>
+
+                        <div class="auth-buttons" style="display:flex; gap:1rem; margin-top:1.5rem;">
+                            <button type="submit" class="btn btn-primary" style="flex:2;" id="reg-submit-btn">Send
+                                OTP</button>
+                            <button type="button" class="btn btn-secondary" style="flex:1;"
+                                onclick="window.location.hash='auth'">Log In</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="register-step-2" class="glass-card auth-card animate-up"
+                    style="max-width: 400px; display: none;">
+                    <h2 class="auth-title">Verify Account</h2>
+                    <p class="auth-subtitle">We sent a 6-digit code to your email and mobile.</p>
+
+                    <div id="otp-error"
+                        style="display:none; color: #ff4444; margin-bottom: 1rem; padding: 0.75rem; background: rgba(255,68,68,0.1); border-radius: 8px; font-size: 0.85rem; font-weight: 500;">
+                    </div>
+
+                    <form class="auth-form" onsubmit="handleVerifyOTP(event)">
+                        <input type="hidden" id="otp-email-hidden">
+
+                        <div class="input-group" style="text-align: center;">
+                            <label style="text-align: left;">6-Digit OTP</label>
+                            <input type="text" id="reg-otp" placeholder="123456" maxlength="6"
+                                style="text-align: center; font-size: 1.5rem; letter-spacing: 5px;" required>
+                        </div>
+
+                        <div class="auth-buttons"
+                            style="display:flex; flex-direction: column; gap:0.5rem; margin-top:1.5rem;">
+                            <button type="submit" class="btn btn-primary" id="otp-submit-btn">Verify & Login</button>
+                            <button type="button" class="btn btn-secondary" onclick="resetRegistration()">Start
+                                Over</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-dashboard" class="view">
+            <div class="dashboard-layout">
+                <aside class="dashboard-sidebar glass" style="border-radius:0 var(--radius-md) var(--radius-md) 0;">
+                    <div class="sidebar-logo" onclick="window.location.hash='landing'" style="cursor: pointer;">edusolve
+                    </div>
+
+                    <nav class="sidebar-nav">
+                        <a href="#solve" class="sidebar-link"><span class="icon">✨</span> Solve</a>
+                        <a href="#practice" class="sidebar-link"><span class="icon">🎯</span> Practice</a>
+                        <a href="#community" class="sidebar-link"><span class="icon">💬</span> Community</a>
+                        <a href="#profile" class="sidebar-link"><span class="icon">👤</span> Profile</a>
+
+                        <a href="#pdf"
+                            style="opacity: 0.7; cursor: not-allowed; pointer-events: none; margin-top: 1rem;">
+                            <span class="icon" style="filter: grayscale(100%); opacity: 0.7;">📄</span> PDF Learning
+                            <span
+                                style="background: linear-gradient(135deg, #a855f7, #ec4899); color: white; padding: 0.2rem 0.5rem; border-radius: 99px; font-size: 0.6rem; font-weight: 800; text-transform: uppercase; margin-left: auto; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(236, 72, 153, 0.4); border: none;">Soon
+                                ✨</span>
+                        </a>
+                    </nav>
+                    <div style="padding: 1rem; margin-top: auto;">
+                        <button class="btn btn-secondary" style="width: 100%;" onclick="handleLogout()">Logout</button>
+                    </div>
+                </aside>
+
+                <div class="dashboard-main section">
+                    <div class="dashboard-header animate-up">
+                        <h2>Welcome, <span class="accent-text" id="username-display">Student</span></h2>
+                        <p>What would you like to learn today?</p>
+                    </div>
+
+                    <div id="practice-stats" style="margin: 2rem 0;">
+                        <p>Loading your statistics...</p>
+                    </div>
+
+                    <div class="dashboard-grid animate-up delay-1">
+                        <div class="glass-card dash-card" onclick="window.location.hash='solve'">
+                            <div class="dash-icon">✨</div>
+                            <h3>Solve Problem</h3>
+                            <p>Get AI-powered step-by-step solutions to your questions.</p>
+                        </div>
+
+                        <div class="glass-card dash-card" onclick="window.location.hash='practice'">
+                            <div class="dash-icon">🎯</div>
+                            <h3>Practice</h3>
+                            <p>Test your knowledge with custom generated questions.</p>
+                        </div>
+
+                        <div class="glass-card dash-card" onclick="window.location.hash='community'">
+                            <div class="dash-icon">💬</div>
+                            <h3>Community</h3>
+                            <p>Discuss problems and collaborate with peers.</p>
+                        </div>
+
+                        <div class="glass-card dash-card"
+                            style="opacity: 0.75; cursor: not-allowed; pointer-events: none;">
+                            <div class="dash-icon" style="filter: grayscale(100%); opacity: 0.6;">📄</div>
+                            <div
+                                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <h3 style="margin-bottom: 0;">Upload PDF</h3>
+                                <span
+                                    style="background: linear-gradient(135deg, #a855f7, #ec4899); color: white; padding: 0.25rem 0.75rem; border-radius: 99px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4); border: none;">Coming
+                                    Soon ✨</span>
+                            </div>
+                            <p>Chat with your documents and learn topics fast.</p>
+                        </div>
+                    </div>
+
+                    <div id="recent-questions" style="margin-top: 2rem;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-solve" class="view">
+            <div class="app-layout section animate-up">
+                <div class="glass-card app-card">
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <h2 class="app-title">✨ AI Tutor Chat</h2>
+                            <p class="app-desc">Ask me anything about Science or Maths!</p>
+                        </div>
+
+                        <div class="chat-messages" id="chat-messages">
+                        </div>
+
+                        <form class="chat-input-form" id="chat-form">
+                            <input type="text" id="chat-input" class="chat-input"
+                                placeholder="Type your question here..." required autocomplete="off">
+                            <button type="submit" class="btn btn-primary chat-send-btn">
+                                Send ➤
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-practice" class="view">
+            <div class="app-layout section animate-up">
+                <div class="glass-card app-card">
+                    <h2 class="app-title">🎯 Practice Center</h2>
+                    <p class="app-desc">Test your knowledge with tailored questions.</p>
+
+                    <div id="practice-container"
+                        style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;">
+                        <div style="text-align: center; color: var(--color-text-muted); padding: 2rem;">
+                            <div class="typing-indicator" style="justify-content: center; margin-bottom: 1rem;">
+                                <span></span><span></span><span></span>
+                            </div>
+                            Loading practice questions...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-pdf" class="view">
+            <div class="app-layout section animate-up">
+                <div class="glass-card app-card">
+                    <h2 class="app-title">PDF Learning</h2>
+                    <p class="app-desc">Upload your study material and ask questions.</p>
+
+                    <div class="pdf-upload-area">
+                        <div class="upload-box" id="pdf-upload-box" onclick="simulatePDFUpload()">
+                            <div class="upload-icon">📄</div>
+                            <p id="pdf-upload-text">Drag and drop or <b>Click to browse</b> to upload PDF</p>
+                        </div>
+                    </div>
+
+                    <div class="pdf-chat-area">
+                        <div class="input-group row-input">
+                            <input type="text" placeholder="Teach me topic...">
+                            <button class="btn btn-primary">Ask</button>
+                        </div>
+
+                        <div class="chat-output mt-2">
+                            <div class="chat-bubble ai mt-1">
+                                <strong>Explanation:</strong>
+                                <p>Upload a PDF to begin learning specific topics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-community" class="view">
+            <div class="app-layout section animate-up">
+                <div class="glass-card app-card community-layout">
+                    <div class="community-sidebar">
+                        <h3 class="sidebar-title">Channels</h3>
+                        <ul class="channel-list">
+                            <li class="active"># general</li>
+                            <li># math-help</li>
+                            <li># physics-doubts</li>
+                            <li># study-techniques</li>
+                        </ul>
+                    </div>
+                    <div class="community-main">
+                        <div class="community-header">
+                            <h3># general</h3>
+                            <p>Discuss anything related to your studies.</p>
+                        </div>
+                        <div class="community-feed">
+                            <div class="post-card">
+                                <div class="post-avatar">A</div>
+                                <div class="post-content">
+                                    <div class="post-meta"><strong>Alex</strong> <span class="time">2h ago</span></div>
+                                    <p>Has anyone mastered integration by parts? I'm struggling with the choosing of u
+                                        and dv.</p>
+                                </div>
+                            </div>
+                            <div class="post-card">
+                                <div class="post-avatar" style="background:var(--color-gradient-2);">S</div>
+                                <div class="post-content">
+                                    <div class="post-meta"><strong>Sarah</strong> <span class="time">1h ago</span></div>
+                                    <p>Use the LIATE rule! Logarithmic, Inverse trig, Algebraic, Trig, Exponential. Pick
+                                        u in that order.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="community-input">
+                            <input type="text" placeholder="Message #general...">
+                            <button class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-profile" class="view">
+            <div class="app-layout section animate-up">
+
+                <div class="glass-card app-card"
+                    style="margin-bottom: 2rem; background: linear-gradient(145deg, rgba(255,255,255,0.6) 0%, rgba(168, 85, 247, 0.05) 100%);">
+                    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+                        <div class="profile-avatar"
+                            style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #a855f7, #ec4899); display: flex; align-items: center; justify-content: center; font-size: 3rem; font-weight: bold; color: white; box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4); border: 4px solid white;">
+                            <span id="profile-initial">S</span>
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <h2 style="margin: 0; font-size: 2rem;" id="profile-username">Student Name</h2>
+                            <p style="color: var(--color-primary); font-weight: 800; margin-top: 0.25rem; letter-spacing: 1px; text-transform: uppercase; font-size: 0.85rem;"
+                                id="profile-title">Novice Learner</p>
+
+                            <div style="margin-top: 1.5rem;">
+                                <div
+                                    style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;">
+                                    <span>Level <span id="profile-level-num">1</span></span>
+                                    <span><span id="profile-current-xp">0</span> / <span id="profile-next-xp">100</span>
+                                        XP</span>
+                                </div>
+                                <div
+                                    style="width: 100%; height: 12px; background: rgba(168, 85, 247, 0.1); border-radius: 99px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);">
+                                    <div id="profile-xp-bar"
+                                        style="height: 100%; width: 0%; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 99px; transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                    <div class="glass-card app-card"
+                        style="display: flex; flex-direction: column; align-items: center; transition: transform 0.3s ease;">
+                        <h3 style="margin-bottom: 1rem; width: 100%; text-align: left;">Accuracy Overview</h3>
+                        <div style="position: relative; height: 220px; width: 100%;">
+                            <canvas id="accuracyChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="glass-card app-card"
+                        style="display: flex; flex-direction: column; align-items: center; transition: transform 0.3s ease;">
+                        <h3 style="margin-bottom: 1rem; width: 100%; text-align: left;">Subject Mastery</h3>
+                        <div style="position: relative; height: 220px; width: 100%;">
+                            <canvas id="subjectChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card app-card">
+                    <h3 style="margin-bottom: 1.5rem;">Trophy Case</h3>
+                    <div class="badges-grid" id="badges-container"
+                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1.5rem; text-align: center;">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+    <script src="api-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="chat.js"></script>
+    <script src="practice.js"></script>
+    <script src="community.js"></script>
+    <script src="profile.js"></script>
+
+    <script>
+        function checkAuthAndNavigate() {
+            if (typeof isAuthenticated === 'function' && isAuthenticated()) {
+                window.location.hash = 'dashboard';
+            } else {
+                window.location.hash = 'auth';
+            }
+        }
+
+        // ==========================================
+        // UNBREAKABLE NATIVE HASH ROUTER
+        // ==========================================
+
+        function handleNavigation() {
+            // 1. Get the requested page from the URL (default to landing)
+            let viewId = window.location.hash.replace('#', '') || 'landing';
+
+            // 2. Hide all pages
+            document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
+
+            // 3. Find the requested page
+            const targetView = document.getElementById('view-' + viewId);
+
+            // 4. If page exists, show it. If not, fallback safely.
+            if (targetView) {
+                targetView.classList.add('active');
+            } else {
+                document.getElementById('view-landing').classList.add('active');
+                viewId = 'landing';
+            }
+
+            // 5. Update the sidebar navigation styling to highlight the active tab
+            document.querySelectorAll('.sidebar-nav a.sidebar-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + viewId) {
+                    link.classList.add('active');
+                }
+            });
+
+            // 6. Trigger specific Javascript for the page we just opened
+            if (viewId === 'profile' && typeof loadProfileView === 'function') {
+                loadProfileView();
+            } else if (viewId === 'community' && typeof loadCommunityChannels === 'function') {
+                loadCommunityChannels();
+            } else if (viewId === 'practice') {
+                // Tell the Practice page to wake up and fetch data
+                if (typeof loadPracticeQuestions === 'function') loadPracticeQuestions();
+                else if (typeof fetchPracticeQuestions === 'function') fetchPracticeQuestions();
+                else if (typeof loadPractice === 'function') loadPractice();
+                else if (typeof initPractice === 'function') initPractice();
+            } else if (viewId === 'dashboard') {
+                // Reload dashboard stats
+                if (typeof loadDashboardStats === 'function') loadDashboardStats();
+                else if (typeof loadDashboard === 'function') loadDashboard();
+            }
+        }
+
+        // Support old navigateTo calls
+        window.navigateTo = function (viewId) {
+            window.location.hash = viewId;
+        };
+
+        // Listen for URL changes
+        window.addEventListener('hashchange', handleNavigation);
+
+        // Run once when the page first loads
+        window.addEventListener('DOMContentLoaded', handleNavigation);
+    </script>
+</body>
+
+</html>
